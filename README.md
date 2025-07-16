@@ -4,7 +4,7 @@
 
 ---
 
-## ✅ 오늘의 작업 내역 (2025.07.16)
+## ✅ 2025.07.16 00:42
 
 ### 🔧 초기 설정
 
@@ -23,32 +23,51 @@
 - 넥슨 Open API를 통해 캐릭터 OCID 검색 및 정보 조회 구조 준비
 
 ---
+### ✅ 2025.07.16 22:18
+
+#### 🕸️ 닉네임 크롤링 기능 구현
+- `maple.gg` 전투력 랭킹 페이지에서 상위 5000명 닉네임 수집
+- `crawler/nickname_crawler.py` 모듈 작성
+- BeautifulSoup으로 `/u/{nickname}` 형태의 `href`를 파싱
+
+#### 🧪 수집 결과 검증
+- 닉네임 리스트를 `pandas.DataFrame`으로 시각적으로 확인
+- `main.py`에서 수집-확인 로직 실행
+
+#### 🔧 Git 설정 개선
+- `.gitignore` 파일 수정:
+  - `api_keys.txt`, `__pycache__/`, `*.pyc` 등 민감/불필요 파일 제외
+- VSCode 내 커밋 메시지 작성 방식 학습
+- Git CLI에서 상태 확인, add → commit → push 실습
 
 ## 🧱 디렉토리 구조
 ```
 NEXON_API/
 │
 ├── api_request/
-│ └── char_info.py # 캐릭터 정보 API 요청 모듈
-├── maple_api_prac.ipynb # 실험용 노트북 파일 (업로드 안함)
+│ └── char_info.py # 캐릭터 API 요청 모듈
+├── crawler/
+│ └── nickname_crawler.py # maple.gg 크롤러
+├── main.py # 전체 실행 흐름
 ├── .gitignore
-├── README.md
-└── api_keys.txt # API 키 저장 (보안 주의 뿌리면 안댐 절대절대)
+└── api_keys.txt # API 키 저장 **(절대절대 비밀!)**
 ```
 ---
 
 ## 💡 향후 계획 체크리스트
 
-- [ ] 여러 캐릭터 데이터 일괄 수집 기능 구현
-- [ ] 랭킹/도장/유니온 등의 API 연동 확장
-- [ ] 수집 데이터를 기반으로 통계 시각화 및 분석
+- [ ] OCID 조회 및 캐릭터 기본 정보 수집 기능 연결
+- [ ] 여러 캐릭터 정보를 `.csv`로 저장
+- [ ] 도장/유니온/랭킹 API 연동 확장
+- [ ] 수집 데이터 분석 및 시각화
 
 ---
 
-## 📌 주의사항 체크리스트
+## 📌 주의사항
 
-- [ ] `api_keys.txt`는 `.gitignore`에 등록하여 GitHub에 업로드되지 않도록 관리
-- [ ] Git 커밋 시 명확한 메시지 작성 (`Move char_info.py to api_request folder` 등)
+- [x] `api_keys.txt`는 `.gitignore`에 포함되어야 함
+- [x] `__pycache__/`, `.pyc` 캐시 파일도 제외
+- [ ] Git 커밋 메시지는 일관성 있게 작성
 
 ---
 
