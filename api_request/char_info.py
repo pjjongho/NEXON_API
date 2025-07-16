@@ -1,5 +1,7 @@
 import warnings
 warnings.filterwarnings(action='ignore')
+
+import os
 import requests
 import pandas as pd
 from tqdm import tqdm
@@ -8,9 +10,11 @@ from urllib.parse import quote
 
 # api 파일 불러오기
 
-filename = './api_keys.txt'
+filename = 'api_keys.txt'
+base_dir = os.path.dirname(__file__)
+filepath = os.path.join(base_dir, filename)
 
-with open(filename, 'r') as file:
+with open(filepath, 'r') as file:
     api_key = file.read().strip()
 
 headers = {"x-nxopen-api-key":api_key}
