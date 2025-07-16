@@ -3,7 +3,7 @@
 그냥 한번 시작하고 보는 것 ㅎ.ㅎ
 
 ---
-
+<div style = "font-size: 14px">
 ## ✅ 2025.07.16 00:42
 
 ### 🔧 초기 설정
@@ -26,7 +26,7 @@
 ### ✅ 2025.07.16 22:18
 
 #### 🕸️ 닉네임 크롤링 기능 구현
-- `maple.gg` 전투력 랭킹 페이지에서 상위 1000명 닉네임 수집 </span style:color="blue" (아마 상관분석을 통해 추천시스템 정도 만들어보려나 싶은 느낌적인 느낌) </span>
+- `maple.gg` 전투력 랭킹 페이지에서 상위 1000명 닉네임 수집 <span style:"color=blue" (아마 상관분석을 통해 추천시스템 정도 만들어보려나 싶은 느낌적인 느낌) </span>
 - `crawler/nickname_crawler.py` 모듈 작성
 - BeautifulSoup으로 `/u/{nickname}` 형태의 `href`를 파싱
 
@@ -74,3 +74,4 @@ NEXON_API/
 ## 📎 참고 링크
 
 - [넥슨 Open API 공식 문서](https://open.api.nexon.com/)
+  </div>
