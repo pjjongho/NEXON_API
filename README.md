@@ -70,8 +70,4 @@ NEXON_API/
 - [ ] Git 커밋 메시지는 일관성 있게 작성
 
 ---
-
-## 📎 참고 링크
-
-- [넥슨 Open API 공식 문서](https://open.api.nexon.com/)
   </div>
