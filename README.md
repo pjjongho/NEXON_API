@@ -77,7 +77,7 @@ NEXON_API/
 │   ├── popularity.py
 │   ├── stat.py
 │   ├── ability.py
-│   └── dojo.py
+│   └── dojang.py
 │
 ├── scripts/
 │   ├── 01_get_nicknames.py
@@ -85,7 +85,7 @@ NEXON_API/
 │   ├── 03_get_popularity.py
 │   ├── 04_get_stat.py
 │   ├── 05_get_ability.py
-│   └── 06_get_dojo.py
+│   └── 06_get_dojang.py
 │
 ├── utils/
 │   └── logger.py 
