@@ -67,7 +67,7 @@ NEXON_API/
 │   ├── character_popularity.csv
 │   ├── character_stat.csv
 │   ├── character_ability.csv
-│   └── dojo.csv
+│   └── dojang.csv
 │
 ├── crawler/
 │   └── nickname_crawler.py
