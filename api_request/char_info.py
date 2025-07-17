@@ -20,7 +20,6 @@ with open(filepath, 'r') as file:
 headers = {"x-nxopen-api-key":api_key}
 
 # OCID (character id) search
-
 def get_ocid(character_name):
     url = f"https://open.api.nexon.com/maplestory/v1/id?character_name={character_name}"
     response = requests.get(url, headers=headers)
@@ -32,8 +31,7 @@ def get_ocid(character_name):
         return None
     
 
-# 캐릭터 기본 정보 조회
-
+# Character Information search
 def get_character_info(ocid):
     url = f"https://open.api.nexon.com/maplestory/v1/character/basic?ocid={ocid}"
     response = requests.get(url, headers=headers)
@@ -43,16 +41,3 @@ def get_character_info(ocid):
     else:
         print("캐릭터 정보 조회 실패 : ", response.status_code, response.text)
         return None
-    
-if __name__ == "__main__":
-    char_name = input("Enter user name : ").strip()
-    ocid = get_ocid(char_name)
-
-    if ocid:
-        info = get_character_info(ocid)
-        if info:
-            print(f"character name : {info['character_name']}")
-            print(f"job : {info['character_class']}")
-            print(f"character level : {info['character_level']}")
-            print(f"World : {info['world_name']}")
-            #print(f"Stat_info : {info['use_preset_no']}")

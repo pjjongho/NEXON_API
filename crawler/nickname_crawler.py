@@ -3,7 +3,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-def get_top_nicknames(n=100):
+def get_top_nicknames(n=500):
     nicknames = []
     page = 1
 
