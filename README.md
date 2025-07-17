@@ -45,19 +45,53 @@
 
 </details>
 
+<details>
+  <summary>✅2025.07.17 - 문제발견 ㅠ ⋯ 펼치기</summary>
+
+  #### 호출 부하에 따른 문제 발견
+  - API 호출량을 인지하지 못함 (하루 1천개 호출인데, 욕심이 너무 과했음)
+  - 디렉토리 구조를 전반적으로 수정
+  - API를 통해 수집하는 스크립트를 나누어서 진행
+  - 수집된 csv 파일도 나누어서 진행
+  
+</details>
+
 ---
 
 ## 🧱 디렉토리 구조
 ```
 NEXON_API/
+├── data/
+│   ├── nicknames.csv
+│   ├── character_info.csv
+│   ├── character_popularity.csv
+│   ├── character_stat.csv
+│   ├── character_ability.csv
+│   └── dojo.csv
+│
+├── crawler/
+│   └── nickname_crawler.py
 │
 ├── api_request/
-│ └── char_info.py # 캐릭터 API 요청 모듈
-├── crawler/
-│ └── nickname_crawler.py # maple.gg 크롤러
-├── main.py # 전체 실행 흐름
-├── .gitignore
-└── api_keys.txt # API 키 저장 **(절대절대 비밀!)**
+│   ├── char_info.py
+│   ├── popularity.py
+│   ├── stat.py
+│   ├── ability.py
+│   └── dojo.py
+│
+├── scripts/
+│   ├── 01_get_nicknames.py
+│   ├── 02_get_character_info.py
+│   ├── 03_get_popularity.py
+│   ├── 04_get_stat.py
+│   ├── 05_get_ability.py
+│   └── 06_get_dojo.py
+│
+├── utils/
+│   └── logger.py 
+│
+└── README.md
+
 ```
 ---
 
@@ -65,7 +99,7 @@ NEXON_API/
 
 - [x] OCID 조회 및 캐릭터 기본 정보 수집 기능 연결 (0716)
 - [x] 여러 캐릭터 정보를 `.csv`로 저장 (0717)
-- [ ] 도장/유니온/랭킹 API 연동 확장
+- [x] 도장/유니온/랭킹 API 연동 확장 (일단 코드는 완성)
 - [ ] 수집 데이터 분석 및 시각화
 
 ---
@@ -74,7 +108,7 @@ NEXON_API/
 
 - [x] `api_keys.txt`는 `.gitignore`에 포함되어야 함
 - [x] `__pycache__/`, `.pyc` 캐시 파일도 제외
-- [ ] Git 커밋 메시지는 일관성 있게 작성
+- [x] `API 호출량` 꼬옥 신경쓸것
 
 ---
   </div>
