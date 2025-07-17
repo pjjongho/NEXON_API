@@ -10,7 +10,7 @@ from urllib.parse import quote
 
 # api 파일 불러오기
 
-filename = 'api_keys.txt'
+filename = 'api_key4.txt'
 base_dir = os.path.dirname(__file__)
 filepath = os.path.join(base_dir, filename)
 
