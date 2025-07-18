@@ -10,7 +10,7 @@ from urllib.parse import quote
 
 # api 파일 불러오기
 
-filename = 'api_key3.txt'
+filename = 'char_info_api.txt'
 base_dir = os.path.dirname(__file__)
 filepath = os.path.join(base_dir, filename)
 
@@ -41,3 +41,4 @@ def get_character_info(ocid):
     else:
         print("캐릭터 정보 조회 실패 : ", response.status_code, response.text)
         return None
+    

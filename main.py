@@ -69,8 +69,8 @@ if __name__ == "__main__":
             'stat_name':'최소스탯공격력', 
             'stat_value':float
 
-            }] 형식으로 저장되어 있어서 for 문을 통해 stat_name, stat_value를 가져옴
-            """
+             }] 형식으로 저장되어 있어서 for 문을 통해 stat_name, stat_value를 가져옴
+             """
             if stat and "final_stat" in stat:
                 stat_row = {"nickname":nickname}
                 for item in stat["final_stat"]:
@@ -80,7 +80,7 @@ if __name__ == "__main__":
             # 어빌리티
             """
             어빌리티는 총 세개의 항목이 존재함 그 항목에 맞게 api를 호출 받을 수 있도록 구성
-            """
+           """
 
             if ability:
                 row = {
@@ -104,3 +104,4 @@ if __name__ == "__main__":
     pd.DataFrame(popularity_list).to_csv('./data/popularity.csv',index=False, encoding='utf-8-sig')
     pd.DataFrame(stat_list).to_csv('./data/stat.csv',index=False, encoding='utf-8-sig')
     pd.DataFrame(fail_list).to_csv('./data/fail_list.csv',index=False, encoding='utf-8-sig')
+    pd.DataFrame(ability_list).to_csv('./data/ability.csv', index=False, encoding='utf-8-sig')

@@ -10,7 +10,7 @@ from urllib.parse import quote
 
 # api 파일 불러오기
 
-filename = 'api_key4.txt'
+filename = 'stat_api.txt'
 base_dir = os.path.dirname(__file__)
 filepath = os.path.join(base_dir, filename)
 
@@ -19,13 +19,14 @@ with open(filepath, 'r') as file:
 
 headers = {"x-nxopen-api-key":api_key}
 
-# dojang search
-def get_dojang(ocid):
-    url = f"https://open.api.nexon.com/maplestory/v1/character/dojang?ocid={ocid}"
+
+# Character Stat
+def get_character_stat(ocid):
+    url = f"https://open.api.nexon.com/maplestory/v1/character/stat?ocid={ocid}"
     response = requests.get(url, headers=headers)
 
     if response.status_code == 200:
         return response.json()
     else:
-        print("무릉도장 정보 조회 실패 : ", response.status_code, response.text)
+        print("캐릭터 종합 스탯 조회 실패 : ", response.status_code, response.text)
         return None
