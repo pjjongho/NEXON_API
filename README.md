@@ -78,9 +78,9 @@
     git clone https://github.com/pjjongho/NEXON_API.git
     cd NEXON_API
     docker build -t nexon-api . && docker run -p 8888:8888 -v ${PWD}:/app nexon-api
-    ```
+    
   
-</details>
+</details>```
 
 ---
 
