@@ -3,7 +3,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-def get_top_nicknames(n=1000):
+def get_top_nicknames(n=500):
     nicknames = []
     page = 1
 
@@ -34,8 +34,8 @@ def get_top_nicknames(n=1000):
 if __name__ == "__main__":
     import pandas as pd
 
-    nicknames = get_top_nicknames(n=1000)
+    nicknames = get_top_nicknames(n=500)
     df = pd.DataFrame(nicknames, columns=["nickname"])
-    df.to_csv("../data/nickname.csv", index=False, encoding='utf-8-sig')
+    df.to_csv("./data/nickname.csv", index=False, encoding='utf-8-sig')
 
     print(f"{len(nicknames)} 수집'")

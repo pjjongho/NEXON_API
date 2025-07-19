@@ -6,3 +6,8 @@ api_request/api_key4.txt
 
 
 data_analysis.ipynb
+api_request/dojang/dojang_api.txt
+api_request/popularity/popularity_api.txt
+api_request/stat/stat_api.txt
+api_request/char_info/char_info_api.txt
+api_request/char_info/char_info.py
