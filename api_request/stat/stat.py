@@ -4,9 +4,7 @@ warnings.filterwarnings(action='ignore')
 import os
 import requests
 import pandas as pd
-from tqdm import tqdm
-import time
-from urllib.parse import quote
+
 
 # api 파일 불러오기
 
