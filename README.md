@@ -70,17 +70,17 @@
   <summary>✅2025.07.19 - Docker 적용 ⋯ 펼치기</summary>
 
   #### Docker를 활용해 외부에서 작업할 수 있도록 설정
-    1. Dockerfile 작성 - `Ubuntu 환경`
-    2. Docker Image Build - `docker build -t nexon-api. `
-    3. Jupyter Notebook 실행
+  1. Dockerfile 작성 - `Ubuntu 환경`
+  2. Docker Image Build - `docker build -t nexon-api. `
+  3. Jupyter Notebook 실행
     
-    ```bash
-    git clone https://github.com/pjjongho/NEXON_API.git
-    cd NEXON_API
-    docker build -t nexon-api . && docker run -p 8888:8888 -v ${PWD}:/app nexon-api
-    
+  ```bash
+  git clone https://github.com/pjjongho/NEXON_API.git
+  cd NEXON_API
+  docker build -t nexon-api . && docker run -p 8888:8888 -v ${PWD}:/app nexon-api
+  ```
   
-</details>```
+</details>
 
 ---
 
