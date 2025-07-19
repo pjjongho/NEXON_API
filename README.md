@@ -87,15 +87,15 @@
 ## 🧱 디렉토리 구조
 ```
 NEXON_API/
-├── data/               # 수집된 CSV 데이터 저장 폴더
-├── api_request/        # 넥슨 Open API 요청 함수들 (API별로 폴더 분리)
-├── crawler/            # maple.gg에서 닉네임 수집 크롤러
-├── scripts/            # API별 수집 스크립트 (01_get_*.py 형식)
-├── dojang_analysis/    # 무릉도장 중심 데이터 분석 및 병합 스크립트
-├── utils/              # 공통 유틸 함수 (logger 등 요것도 나중에 작업)
-├── main.py             # 수정해야함
-├── .gitignore
-└── README.md
+├── api_request/        # 넥슨 API 요청 함수들 모음 (API별로 정리해둠)
+├── crawler/            # maple.gg에서 닉네임 수집하는 크롤러
+├── data/               # 수집한 csv 데이터 저장하는 곳
+├── dojang_analysis/    # 무릉도장 관련 분석이나 데이터 병합용 스크립트
+├── scripts/            # API별 수집 스크립트들 (01_get_*.py처럼 순서대로)
+├── .gitignore          # api_key 같은 민감한 파일은 커밋 안 되게 설정함
+├── Dockerfile          # 도커로 실행할 수 있도록 환경 정의한 파일
+├── main.py             # 일단 진입점인데 아직 손봐야 함
+└── README.md           
 ```
 ---
 
@@ -104,6 +104,7 @@ NEXON_API/
 - [x] OCID 조회 및 캐릭터 기본 정보 수집 기능 연결 (0716)
 - [x] 여러 캐릭터 정보를 `.csv`로 저장 (0717)
 - [x] 도장/유니온/랭킹 API 연동 확장 (일단 코드는 완성)
+- [x] Docker 활용
 - [ ] 수집 데이터 분석 및 시각화
 
 ---
