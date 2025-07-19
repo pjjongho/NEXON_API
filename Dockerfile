@@ -1,7 +1,7 @@
 # Docker를 활용해보자!!
 # Feat. GPT
-# 1. Python 3.10 version
-FROM python:3.10-slim
+# 1. Python 3.11 version
+FROM python:3.11-slim
 
 # 2. Work Folder
 WORKDIR /app
