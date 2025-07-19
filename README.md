@@ -82,6 +82,16 @@
   
 </details>
 
+<details>
+  <summary>✅2025.07.20 - Symbol Info 추가 ⋯ 펼치기</summary>
+
+  #### Add Symbol API
+  - Symbol API를 새로 호출하여 데이터를 추가
+  - 도커 업로드 완료
+  - 총 다섯개의 API 호출
+  - 더이상 API 호출하지 않고 분석 및 머신러닝, 딥러닝 진행
+  
+</details>
 ---
 
 ## 🧱 디렉토리 구조
@@ -112,7 +122,6 @@ NEXON_API/
 ## 📌 주의사항
 
 - [x] `api_keys.txt`는 `.gitignore`에 포함되어야 함
-- [x] `__pycache__/`, `.pyc` 캐시 파일도 제외
 - [x] `API 호출량` 꼬옥 신경쓸것
 
 ---
