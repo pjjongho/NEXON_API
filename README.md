@@ -7,7 +7,8 @@
 
 ```
 NEXON_API/
-├── Maple/ # 메이플 관련 데이터 수집/분석 - 자세한 내용은 [`Maple/`](./Maple) 폴더에서 확인 가능!
+├── Maple/ # 메이플 관련 데이터 수집/분석 - [Maple 폴더 바로가기](https://github.com/pjjongho/NEXON_API/tree/main/Maple)
+
 ├── Baram/ # (예정) 바람의 나라
 ├── SuddenAttack/ # (예정) 서든어택
 └── README.md
