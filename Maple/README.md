@@ -1,6 +1,6 @@
 # 🗂️ Maple API 활용
 
-<img src="https://image.ytn.co.kr/general/jpg/2021/0311/202103110915014429_d.jpg" width="500"/>
+![YTN 뉴스 이미지](https://image.ytn.co.kr/general/jpg/2021/0311/202103110915014429_d.jpg)
 
 
 그냥 한번 시작하고 보는 것 ㅎ.ㅎ
