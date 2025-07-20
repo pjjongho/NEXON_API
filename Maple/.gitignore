@@ -1,8 +1,13 @@
-data_analysis.ipynb
+# API 응답 데이터
 api_request/dojang/dojang_api.txt
 api_request/popularity/popularity_api.txt
 api_request/stat/stat_api.txt
 api_request/char_info/char_info_api.txt
-api_request/char_info/char_info.py
 api_request/symbol/dojang_api.txt
+
+# Python 캐시 파일
+__pycache__/
+*.pyc
+
+# 분석 노트북 파일 (예: 실험용)
 dojang_analysis/analysis.ipynb
