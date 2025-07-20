@@ -96,7 +96,7 @@
 
 ## 🧱 디렉토리 구조
 ```
-NEXON_API/
+Maple/
 ├── api_request/        # 넥슨 API 요청 함수들 모음 (API별로 정리해둠)
 ├── crawler/            # maple.gg에서 닉네임 수집하는 크롤러
 ├── data/               # 수집한 csv 데이터 저장하는 곳
