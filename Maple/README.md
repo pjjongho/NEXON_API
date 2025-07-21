@@ -96,6 +96,16 @@
   - 더이상 API 호출하지 않고 분석 및 머신러닝, 딥러닝 진행
   
 </details>
+
+<details>
+  <summary>✅2025.07.21 - Data 병합 (드디어)  ⋯ 펼치기</summary>
+
+  ### Data 병합
+  - Key값은 maple.gg에서 크롤링한 nickname으로 하고 Inner Join
+  - stat 이랑 symbol 같은 경우 컬럼이 딕셔너리 형태로 구성되어 있어서 까다로웠음
+  - 그래도 원하는대로 해냄 ㅎㅎ 뿌-듯
+  
+</details>
 ---
 
 ## 🧱 디렉토리 구조
