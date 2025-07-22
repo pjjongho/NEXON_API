@@ -9,5 +9,3 @@ api_request/symbol/dojang_api.txt
 __pycache__/
 *.pyc
 
-# 분석 노트북 파일 (예: 실험용)
-dojang_analysis/analysis.ipynb
