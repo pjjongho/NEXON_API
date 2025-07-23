@@ -106,6 +106,17 @@
   - 그래도 원하는대로 해냄 ㅎㅎ 뿌-듯
   
 </details>
+
+<details>
+  <summary>✅2025.07.23 - 모든 데이터 스케일링 및 변환 ⋯ 펼치기</summary>
+
+  ### 지금까지?
+  - 수집한 데이터들을 로그 변환 및 스케일링 진행
+  - RandomForest 모델에 dojang_best_floor 를 타겟으로 실행해봄
+  - 처참한 결과...
+  - 설레는 마음으로 돌렸으나 예측을 전혀 못함.
+  - Feature Engineering을 좀 더 잘 해볼 것
+</details>
 ---
 
 ## 🧱 디렉토리 구조
