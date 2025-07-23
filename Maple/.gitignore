@@ -9,3 +9,6 @@ api_request/symbol/dojang_api.txt
 __pycache__/
 *.pyc
 
+# ml notebook
+dojang_analysis/dojang_ml.ipynb
+
