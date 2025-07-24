@@ -11,4 +11,6 @@ __pycache__/
 
 # ml notebook
 dojang_analysis/dojang_ml.ipynb
+dojang_analysis/analysis_for_ml.ipynb
+dojang_analysis/preprocessing.txt
 
