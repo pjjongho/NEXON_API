@@ -1,6 +1,8 @@
 # 🗂️ 바람의나라 API 활용
 
-그냥 한번 시작해본 건데... 너무 많이 해버림 😅
+<p align="center">
+  <img src="https://blog.kakaocdn.net/dna/bNf4cM/btsKF4DNtnq/AAAAAAAAAAAAAAAAAAAAAK6ke22ku0kH6VncFJT7fiEfxeq_skFMXY4g_Rf_gcGp/img.jpg?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1753973999&allow_ip=&allow_referer=&signature=RSGKUhcwugcO0FvEIq0yF%2BVCJkI%3D" width="350"/>
+</p>
 
 ---
 
@@ -49,6 +51,18 @@
 </details>
 
 ---
+## 🧱 디렉토리 구조
+Baram/
+├── api_request/ # API 호출 관련 모듈
+│ ├── basic/ # 캐릭터 기본 정보 조회 API
+│ ├── id/ # OCID 조회 API
+│ └── stat/ # 캐릭터 스탯 조회 API
+├── crawler/ # 닉네임 수집용 크롤러
+├── data/ # 수집된 원본 데이터 저장 경로
+│ # baram_ranker.csv, ocid.csv, basic.csv, stat.csv, stat_df.csv 등
+├── main_analysis/ # 병합 및 분석용 코드
+│ ├── data/ # 병합된 최종 csv 저장 위치
+
 
 
 ---
