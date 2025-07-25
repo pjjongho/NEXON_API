@@ -51,7 +51,10 @@
 </details>
 
 ---
+
 ## 🧱 디렉토리 구조
+
+```
 Baram/
 ├── api_request/ # API 호출 관련 모듈
 │ ├── basic/ # 캐릭터 기본 정보 조회 API
@@ -62,7 +65,7 @@ Baram/
 │ # baram_ranker.csv, ocid.csv, basic.csv, stat.csv, stat_df.csv 등
 ├── main_analysis/ # 병합 및 분석용 코드
 │ ├── data/ # 병합된 최종 csv 저장 위치
-
+```
 
 
 ---
