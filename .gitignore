@@ -7,3 +7,9 @@ Baram/api_request/id/__pycache__/get_id.cpython-311.pyc
 Baram/crwaler/chromedriver-win64/LICENSE.chromedriver
 Baram/crwaler/chromedriver-win64/chromedriver.exe
 Baram/crwaler/chromedriver-win64.zip
+Baram/api_request/basic/__pycache__/char_basic.cpython-38.pyc
+.gitignore
+Baram/api_request/id/__pycache__/char_id.cpython-38.pyc
+Baram/api_request/stat/__pycache__/char_stat.cpython-38.pyc
+Baram/analysis.ipynb
+
