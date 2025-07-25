@@ -17,8 +17,8 @@ NEXON_API/
 ---
 
 ## ➡️ 폴더 이동
-1. Maple - [Maple 폴더 바로가기](https://github.com/pjjongho/NEXON_API/tree/main/Maple)
-2. 바람의 나라 - [바람의 나라](https://github.com/pjjongho/NEXON_API/tree/main/Baram).
+1. [Maple](https://github.com/pjjongho/NEXON_API/tree/main/Maple)
+2. [바람의 나라](https://github.com/pjjongho/NEXON_API/tree/main/Baram).
 
 ---
 
