@@ -39,7 +39,7 @@ def main():
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
 
-    CHROMEDRIVER_PATH = r"C:\Users\jjong\Desktop\Practice\NEXON_API\Baram\crwaler\chromedriver-win64\chromedriver.exe"
+    CHROMEDRIVER_PATH = r"크롬드라이버 경로"
     service = Service(executable_path=CHROMEDRIVER_PATH)
     driver = webdriver.Chrome(service=service, options=options)
 
