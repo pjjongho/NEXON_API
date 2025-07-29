@@ -6,11 +6,11 @@ import requests
 import time
 from tqdm import tqdm
 
-with open('./api_request/basic/sa_2.txt', 'r') as f:
+with open('api 파일이 있는 경로', 'r') as f:
     api_key=f.read().strip()
 
 # ouid.csv load
-df = pd.read_csv('./data/ouid.csv')
+df = pd.read_csv('./SA/data/ouid.csv')
 ouids = df['ouid'].dropna().tolist()
 
 results = []
@@ -36,4 +36,4 @@ for ouid in tqdm(ouids):
         print(f"[EXCEPTION] {ouid} - {e}")
         time.sleep(1.0)
 
-pd.DataFrame(results).to_csv('./data/basic.csv', index=False, encoding='utf-8-sig')
+pd.DataFrame(results).to_csv('./SA/data/basic.csv', index=False, encoding='utf-8-sig')

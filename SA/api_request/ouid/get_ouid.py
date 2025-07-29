@@ -8,7 +8,7 @@ from tqdm import tqdm
 from urllib.parse import quote
 
 # API 키 불러오기
-with open('./api_request/ouid/sa_1.txt', 'r') as f:
+with open('api 파일이 있는 경로', 'r') as f:
     api_key = f.read().strip()
 
 # 닉네임 CSV 불러오기

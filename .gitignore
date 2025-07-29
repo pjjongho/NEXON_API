@@ -29,3 +29,5 @@ SA/crwaler/__pycache__/prac.cpython-38.pyc
 SA/crwaler/chromedriver-win64/chromedriver.exe
 SA/crwaler/chromedriver-win64/LICENSE.chromedriver
 SA/crwaler/chromedriver-win64/THIRD_PARTY_NOTICES.chromedriver
+SA/api_request/basic/sa_3.txt
+SA/api_request/basic/__pycache__/get_basic.cpython-311.pyc
