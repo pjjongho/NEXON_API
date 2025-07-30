@@ -35,3 +35,7 @@ SA/api_request/tier/__pycache__/get_tier.cpython-38.pyc
 SA/api_request/recent-info/sa_3.txt
 SA/api_request/recent-info/__pycache__/get_recent-info.cpython-38.pyc
 SA/api_request/tier/sa_2.txt
+SA/api_request/rank/sa_4.txt
+SA/api_request/rank/__pycache__/get_rank.cpython-311.pyc
+SA/api_request/tier/tier_df_eda.ipynb
+SA/api_request/tier/tier_df_eda.ipynb
