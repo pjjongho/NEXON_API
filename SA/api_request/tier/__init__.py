@@ -1,1 +1,0 @@
-# tier_info sa_2
