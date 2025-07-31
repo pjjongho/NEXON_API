@@ -39,3 +39,4 @@ SA/api_request/rank/sa_4.txt
 SA/api_request/rank/__pycache__/get_rank.cpython-311.pyc
 SA/api_request/tier/tier_df_eda.ipynb
 SA/api_request/tier/tier_df_eda.ipynb
+SA/api_request/match/__pycache__/get_match.cpython-38.pyc
