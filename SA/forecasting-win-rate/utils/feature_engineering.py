@@ -19,7 +19,7 @@ def feature_engineering(match_path, merged_path, save_path):
     df_match['is_loss'] = df_match['match_result'].apply(lambda x: 1 if x == 2 else 0)
 
     # 4. 유저별 경기 요약 통계
-    user_summary = df_match.groupby('user_name')[['is_win', 'is_draw', 'is_loss', 'kill', 'death', 'assist']].sum().reset_index()
+    user_summary = df_match.groupby('ouid')[['is_win', 'is_draw', 'is_loss', 'kill', 'death', 'assist']].sum().reset_index()
     user_summary['total_matches'] = user_summary[['is_win', 'is_draw', 'is_loss']].sum(axis=1)
     user_summary['actual_win_rate'] = user_summary['is_win'] / user_summary['total_matches']
     user_summary['user_kda'] = (user_summary['kill'] + user_summary['assist']) / user_summary['death'].replace(0, 1)
@@ -47,8 +47,8 @@ def feature_engineering(match_path, merged_path, save_path):
 
                     record = {
                         'user_name': basic['user_name'],
-                        'grade_ranking': rank['grade'],
-                        'season_grade_ranking': rank['season_grade'],
+                        'grade_ranking': rank['grade_ranking'],
+                        'season_grade_ranking': rank['season_grade_ranking'],
                         'recent_win_rate': recent['recent_win_rate'],
                         'recent_kill_death_rate': recent['recent_kill_death_rate'],
                         'recent_assault_rate': recent['recent_assault_rate'],
@@ -64,7 +64,7 @@ def feature_engineering(match_path, merged_path, save_path):
     df_merged = pd.DataFrame(records)
 
     # 6. match 통계와 병합
-    df_final = pd.merge(df_merged, user_summary, on='user_name', how='inner')
+    df_final = pd.merge(df_merged, user_summary, on='ouid', how='inner')
 
     # 7. 이진 분류 target 정의
     mean_win_rate = df_final['actual_win_rate'].mean()

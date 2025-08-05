@@ -78,3 +78,6 @@ SA/forecasting-win-rate/api_request/__pycache__/get_tier.cpython-311.pyc
 SA/forecasting-win-rate/utils/__pycache__/__init__.cpython-311.pyc
 SA/forecasting-win-rate/utils/__pycache__/feature_engineering.cpython-311.pyc
 SA/forecasting-win-rate/analysis/aa.ipynb
+SA/forecasting-win-rate/analysis/df_final.csv
+SA/forecasting-win-rate/analysis/df_match.csv
+SA/forecasting-win-rate/analysis/df_merged.csv
