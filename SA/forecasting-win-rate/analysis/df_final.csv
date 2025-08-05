@@ -1,2 +1,8 @@
-user_name,grade_ranking,season_grade_ranking,recent_win_rate,recent_kill_death_rate,recent_assault_rate,recent_sniper_rate,recent_special_rate,solo_rank_match_score,party_rank_match_score,is_win,is_draw,is_loss,kill,death,assist,total_matches,actual_win_rate,user_kda,user_kill,user_death,user_assist,kill_per_match,death_per_match,assist_per_match,target
-판도라여리,349100,95644,50.0,48.5,46.0,60.0,48.226952,1400,1524,0,0,1,12,14,4,1,0.0,1.1428571428571428,12,14,4,12.0,14.0,4.0,1
+user_name,grade_ranking,season_grade_ranking,recent_win_rate,recent_kill_death_rate,recent_assault_rate,recent_sniper_rate,recent_special_rate,solo_rank_match_score,party_rank_match_score,is_win,is_draw,is_loss,kill,death,assist,total_matches,actual_win_rate,user_kda,user_kill,user_death,user_assist,kill_per_match,death_per_match,assist_per_match,match_result,match_id,team_id,target
+김애해,214577,174603,55.0,51.333332,46.0,63.333332,51.666668,1500,1500,1,0,0,14,12,1,1,1.0,1.25,14,12,1,14.0,12.0,1.0,1,250804032415124002,1,1
+김에효,121924,105755,42.105263,45.373135,26.31579,60.540539,45.454544,1400,1181,1,0,0,9,12,4,1,1.0,1.0833333333333333,9,12,4,9.0,12.0,4.0,1,250804032415124002,1,1
+꽃개,46876,153497,51.666664,55.0,48.666668,63.0,57.446808,1750,2312,1,0,0,21,11,1,1,1.0,2.0,21,11,1,21.0,11.0,1.0,1,250804032415124002,1,1
+나슈,3371,66316,28.333334,46.333332,38.666664,55.0,26.333334,1737,1918,0,0,1,17,12,0,1,0.0,1.4166666666666667,17,12,0,17.0,12.0,0.0,2,250804032415124002,0,0
+농삼,5111,4385,48.333332,48.333332,41.0,53.0,54.0,1813,2389,1,0,0,2,2,5,1,1.0,3.5,2,2,5,2.0,2.0,5.0,1,250804032415124002,1,1
+신금수,1629081,153247,16.666668,43.166668,37.606838,58.0,35.714287,1400,1400,0,0,1,8,15,4,1,0.0,0.8,8,15,4,8.0,15.0,4.0,2,250804032415124002,0,0
+잠수교잠수킬먹충,1427765,130967,23.333334,48.5,52.666664,55.0,52.666668,2076,2069,0,0,1,16,11,4,1,0.0,1.8181818181818181,16,11,4,16.0,11.0,4.0,2,250804032415124002,0,0

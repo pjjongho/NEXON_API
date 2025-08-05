@@ -3,23 +3,45 @@ import json
 import pandas as pd
 
 def feature_engineering(match_path, merged_path, save_path):
+    # 분석 폴더 절대경로 고정
+    analysis_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "analysis"))
+    os.makedirs(analysis_dir, exist_ok=True)
+
     # 1. match_detail 로드
     with open(match_path, 'r', encoding='utf-8') as f:
         match_detail = json.load(f)
 
-    # 2. match_detail → df_match 변환
+    # 루트 메타데이터 추가
+    root_match_id = match_detail.get('match_id')
+    root_match_type = match_detail.get('match_type')
+    root_match_mode = match_detail.get('match_mode')
+    root_match_map = match_detail.get('match_map')
+    root_date_match = match_detail.get('date_match')
+
+    for player in match_detail['match_detail']:
+        player['match_id'] = root_match_id
+        player['match_type'] = root_match_type
+        player['match_mode'] = root_match_mode
+        player['match_map'] = root_match_map
+        player['date_match'] = root_date_match
+
+    # 2. DataFrame 변환
     df_match = pd.DataFrame(match_detail['match_detail'])
 
-    # 문자열로 저장된 match_result를 정수형으로 변환
+    # match_result 정수 변환
     df_match['match_result'] = df_match['match_result'].astype(int)
 
-    # 3. 승/무/패 여부 컬럼 생성
+    # 3. 승/무/패 여부 컬럼
     df_match['is_win'] = df_match['match_result'].apply(lambda x: 1 if x == 1 else 0)
     df_match['is_draw'] = df_match['match_result'].apply(lambda x: 1 if x == 3 else 0)
     df_match['is_loss'] = df_match['match_result'].apply(lambda x: 1 if x == 2 else 0)
 
-    # 4. 유저별 경기 요약 통계
-    user_summary = df_match.groupby('ouid')[['is_win', 'is_draw', 'is_loss', 'kill', 'death', 'assist']].sum().reset_index()
+    # 4. 유저별 경기 매치 통계
+    user_summary = (
+        df_match.groupby('user_name')[['is_win', 'is_draw', 'is_loss', 'kill', 'death', 'assist']]
+        .sum()
+        .reset_index()
+    )
     user_summary['total_matches'] = user_summary[['is_win', 'is_draw', 'is_loss']].sum(axis=1)
     user_summary['actual_win_rate'] = user_summary['is_win'] / user_summary['total_matches']
     user_summary['user_kda'] = (user_summary['kill'] + user_summary['assist']) / user_summary['death'].replace(0, 1)
@@ -32,21 +54,20 @@ def feature_engineering(match_path, merged_path, save_path):
 
     # 5. collected_data의 JSON 파일 로드 및 병합
     records = []
-    for filename in os.listdir("./collected_data"):
-        if filename.endswith("basic.json"):
-            ouid = filename.split("_")[0]
+    for filename in os.listdir("./collected_data/basic_json"):
+        if filename.endswith(".json"):
             try:
-                with open(f"./collected_data/{ouid}_basic.json", encoding='utf-8') as f1, \
-                     open(f"./collected_data/{ouid}_rank.json", encoding='utf-8') as f2, \
-                     open(f"./collected_data/{ouid}_recent.json", encoding='utf-8') as f3, \
-                     open(f"./collected_data/{ouid}_tier.json", encoding='utf-8') as f4:
+                with open(os.path.join("./collected_data/basic_json", filename), encoding='utf-8') as f1, \
+                     open(os.path.join("./collected_data/rank_json", filename.replace("bs", "rk")), encoding='utf-8') as f2, \
+                     open(os.path.join("./collected_data/recent_json", filename.replace("bs", "ri")), encoding='utf-8') as f3, \
+                     open(os.path.join("./collected_data/tier_json", filename.replace("bs", "tr")), encoding='utf-8') as f4:
                     basic = json.load(f1)
                     rank = json.load(f2)
                     recent = json.load(f3)
                     tier = json.load(f4)
 
                     record = {
-                        'user_name': basic['user_name'],
+                        'user_name': basic.get('user_name', None),
                         'grade_ranking': rank['grade_ranking'],
                         'season_grade_ranking': rank['season_grade_ranking'],
                         'recent_win_rate': recent['recent_win_rate'],
@@ -59,21 +80,27 @@ def feature_engineering(match_path, merged_path, save_path):
                     }
                     records.append(record)
             except Exception as e:
-                print(f"[SKIP] 병합 중 오류 발생 - {ouid}: {e}")
+                print(f"[ERROR] 병합 에러 - {filename}: {e}")
 
     df_merged = pd.DataFrame(records)
 
-    # 6. match 통계와 병합
-    df_final = pd.merge(df_merged, user_summary, on='ouid', how='inner')
+    # 6. match_result 포함 병합
+    match_result_only = df_match[['user_name', 'match_result', 'match_id', 'team_id']].drop_duplicates(subset=['user_name'])
+    df_final = pd.merge(df_merged, user_summary, on='user_name', how='inner')
+    df_final = pd.merge(df_final, match_result_only, on='user_name', how='left')
 
     # 7. 이진 분류 target 정의
-    mean_win_rate = df_final['actual_win_rate'].mean()
-    df_final['target'] = (df_final['actual_win_rate'] >= mean_win_rate).astype(int)
+    df_final['target'] = df_final['match_result'].map({1: 1, 2: 0, 3: 0})
 
-    # 8. 저장
-    os.makedirs(os.path.dirname(save_path), exist_ok=True)
-    df_match.to_csv("./analysis/df_match.csv", index=False)
-    df_merged.to_csv("./analysis/df_merged.csv", index=False)
+    # 8. 저장 (절대경로 사용)
+    df_match.to_csv(os.path.join(analysis_dir, "df_match.csv"), index=False)
+    df_merged.to_csv(os.path.join(analysis_dir, "df_merged.csv"), index=False)
     df_final.to_csv(save_path, index=False)
+
+    # 9. 평가용 데이터 저장
+    eval_data = match_result_only.copy()
+    eval_data['match_result'] = eval_data['match_result'].map({1: 1, 2: 0, 3: 0})
+    eval_data_path = os.path.join(analysis_dir, "match_results.csv")
+    eval_data.to_csv(eval_data_path, index=False, encoding='utf-8-sig')
 
     return df_final
