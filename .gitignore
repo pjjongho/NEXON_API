@@ -1,5 +1,11 @@
 # 바람의나라 / 서든어택 API 키, 캐시, 실행 결과 제외
-*.txt
+api_key.txt
+sa_3.txt
+SA/api_request/rank/sa_4.txt
+Baram/api_request/id/baram_1.txt
+Baram/api_request/basic/baram_2.txt
+Baram/api_request/item/baram_2.txt
+Baram/api_request/stat/baram_3.txt
 __pycache__/
 *.pyc
 
@@ -20,10 +26,13 @@ SA/analysis*
 SA/data*
 SA/api_request/**/__pycache__/
 
-SA/forecasting-win-rate/analysis/
-SA/forecasting-win-rate/collected_data/
+SA/forecasting-win-rate/collected_data/*_json/
 
 # 만약 다른 실험용 스크립트/데이터도 제외
 SA/aa.ipynb
 SA/forecasting-win-rate/model/saved_models/
+
+SA/forecasting-win-rate/model/random_forest_model.pkl
+SA/forecasting-win-rate/model/xgboost_model.pkl
+
 
