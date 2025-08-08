@@ -1,6 +1,7 @@
 # 🎯 Sudden Attack Match Win Rate Forecasting
 ![서든어택](https://i.namu.wiki/i/4LZcuWoD6vcjzKy_Xe9B79-QFbi3uIQfIo70tBnupcJvoh_SM0gcNPl2Wv48ia8gZNk6oF5legv3USDsdQZvpg.svg)
 
+---
 ### ⚠️ 주의: NEXON API KEY는 api_key.txt폴더로 forcasting-win-rate/api_key.txt로 있어야함
 
 ## 환경 설치 (Setup)
