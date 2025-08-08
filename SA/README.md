@@ -67,9 +67,4 @@ flowchart TD
     D --> E["초기 모델 학습 & pkl 저장 (forecasting-win-rate/model/saved_models)"]
     E --> F["forecasting-win-rate 재학습 / 추론"]
 ```
-    E --> F["forecasting-win-rate 재학습 / 추론"]
-
-
-
-## 3. 폴더 구조
 
