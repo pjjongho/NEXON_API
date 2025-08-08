@@ -66,10 +66,12 @@ forecasting-win-rate/
 ## 5. 작업 플로우
 ```mermaid
 flowchart TD
-    A[닉네임 수집] --> B[OUID 수집]
-    B --> C[유저 기본 데이터 수집 (basic, rank, recent, tier)]
-    C --> D[매치 상세 데이터 수집]
-    D --> E[데이터 병합 & feature_engineering]
-    E --> F[모델 학습 (RF, XGB)]
-    F --> G[추론 및 승률 계산]
-    G --> H[결과 저장/분석]
+    A["닉네임 수집"] --> B["OUID 수집"]
+    B --> C["유저 기본 데이터 수집<br/>(basic, rank, recent, tier)"]
+    C --> D["매치 상세 데이터 수집"]
+    D --> E["데이터 병합 &amp; feature_engineering"]
+    E --> F["모델 학습 (RF, XGB)"]
+    F --> G["추론 및 승률 계산"]
+    G --> H["결과 저장/분석"]
+
+```
