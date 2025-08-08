@@ -61,7 +61,6 @@ forecasting-win-rate/
 ### 📂 `api_request/`
 - 넥슨 Open API 호출 모듈
 - 각 API(basic, rank, recent, tier, match_detail)에 대해 별도 스크립트 작성
-- `requests`와 `tqdm`을 활용한 비동기적 수집 구조
 
 ### 📂 `collected_data/`
 - API 응답 저장 디렉토리
