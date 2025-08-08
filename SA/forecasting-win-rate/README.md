@@ -13,6 +13,9 @@ conda activate sa_forecast
 
 # 3. 필수 라이브러리 설치
 pip install -r requirements.txt
+
+# 4. 실행
+python main.py
 ```
 
 ## 1. 프로젝트 개요
