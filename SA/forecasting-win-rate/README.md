@@ -3,6 +3,7 @@
 
 ---
 ### ⚠️ 주의: NEXON API KEY는 api_key.txt폴더로 forcasting-win-rate/api_key.txt로 있어야함
+---
 
 ## 환경 설치 (Setup)
 ```bash
