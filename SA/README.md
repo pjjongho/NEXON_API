@@ -64,7 +64,9 @@ flowchart TD
     A["랭커 크롤링 (crawler)"] --> B["OUID 수집 (api_request)"]
     B --> C["유저 데이터 수집 (basic, rank, recent, tier, match, match_detail)"]
     C --> D["EDA 및 전처리 (analysis)"]
-    D --> E["초기 모델 학습 & pkl 저장 **(forecasting-win-rate/model/saved_models/)** "]
+    D --> E["초기 모델 학습 & pkl 저장 (forecasting-win-rate/model/saved_models)"]
+    E --> F["forecasting-win-rate 재학습 / 추론"]
+```
     E --> F["forecasting-win-rate 재학습 / 추론"]
 
 
