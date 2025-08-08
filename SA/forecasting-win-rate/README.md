@@ -1,6 +1,20 @@
 # 🎯 Sudden Attack Match Win Rate Forecasting
 ![서든어택](https://i.namu.wiki/i/4LZcuWoD6vcjzKy_Xe9B79-QFbi3uIQfIo70tBnupcJvoh_SM0gcNPl2Wv48ia8gZNk6oF5legv3USDsdQZvpg.svg)
 
+## 환경 설치 (Setup)
+```bash
+# 1. 저장소 클론
+git clone https://github.com/username/forecasting-win-rate.git
+cd forecasting-win-rate
+
+# 2. 가상환경 생성 & 활성화
+conda create -n sa_forecast python=3.10 -y
+conda activate sa_forecast
+
+# 3. 필수 라이브러리 설치
+pip install -r requirements.txt
+```
+
 ## 1. 프로젝트 개요
 **넥슨 Open API**를 활용하여 서든어택 유저 데이터를 수집하고  
 경기 전/후 정보를 기반으로 **승리 확률을 예측하는 머신러닝 모델**을 구축하는 것을 목표로 함
