@@ -7,14 +7,14 @@
 #### 🛠 주요 기능
 1. **매치 메타데이터 추가**
    - `match_id`, `match_type`, `match_mode`, `match_map`, `date_match`를 모든 매치 유저 행에 추가  
-   → 이후 병합 및 누적 저장 시 동일 경기 컨텍스트 유지
+   → 이후 병합 및 누적 저장 시 동일 매치 컨텍스트 유지
 
-2. **경기 결과 파생 컬럼 생성**
+2. **매치 결과 파생 컬럼 생성**
    - `match_result`를 `is_win / is_draw / is_loss`로 변환
    - 향후 통계 계산 및 타겟 레이블 생성에 활용
 
 3. **유저 요약 통계(user_summary) 산출**
-   - 유저별 승/무/패, 킬·데스·어시스트 수 및 경기당 평균, KDA 등 계산
+   - 유저별 승/무/패, 킬·데스·어시스트 수 및 매치당 평균, KDA 등 계산
    - `user_summary.csv`에 누적 저장 (기존 데이터와 중복 제거)
 
 4. **API 데이터 병합(df_merged)**
@@ -25,7 +25,7 @@
      - 티어 점수: `solo_rank_match_score`, `party_rank_match_score`
 
 5. **추가 Feature 제거**
-   - 경기 결과에 직접적으로 의존하는 지표(`user_kda`, `*_per_match`, `actual_win_rate`)는 학습셋에서 제외
+   - 매치 결과에 직접적으로 의존하는 지표(`user_kda`, `*_per_match`, `actual_win_rate`)는 학습셋에서 제외
      ```
      제외에 대한 근거는 SA/analysis/data_eda.ipynb 를 통해 매치에 직접적인 영향을 주는 컬럼과 importance feature를 통해 중요도가 높은 feature를 select
      ```
@@ -53,7 +53,7 @@
 
 #### 💡 특징
 - **Idempotent 설계**: 여러 번 실행해도 중복 없이 최신 데이터만 유지
-- **Leakage 방지**: 동일 경기에서 파생된 과도한 성능지표는 학습셋에서 제외
+- **Leakage 방지**: 동일 매치에서 파생된 과도한 성능지표는 학습셋에서 제외
 - **유니크 키 유지**: `['user_name','match_id']`를 전 과정에서 고유 식별자로 사용
 - **원본·요약·최종셋 분리 저장**: 디버깅, 분석, 재현성 확보에 유리
 
