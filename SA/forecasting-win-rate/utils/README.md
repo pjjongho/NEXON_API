@@ -46,7 +46,7 @@
 | `df_match.csv` | 매치 참가자 단위 원본+파생 메타 | `user_name`, `match_id` |
 | `user_summary.csv` | 유저별 누적 요약 통계 | `user_name`, `match_id` |
 | `df_merged.csv` | API 기반 요약 지표 | `user_name` |
-| `df_final.csv` | 학습 입력 데이터셋 (누설 피처 제외, target 포함) | `user_name`, `match_id` |
+| `df_final.csv` | 학습 입력 데이터셋 (target 포함) | `user_name`, `match_id` |
 | `match_results.csv` | 매치별 승패 레이블만 저장 | `user_name`, `match_id` |
 
 ---
