@@ -24,7 +24,7 @@
      - 최근 전적: `recent_win_rate`, `recent_kill_death_rate`, 포지션 비율
      - 티어 점수: `solo_rank_match_score`, `party_rank_match_score`
 
-5. **모델 정보 누설(Leakage) 방지**
+5. **추가 Feature 제거**
    - 경기 결과에 직접적으로 의존하는 지표(`user_kda`, `*_per_match`, `actual_win_rate`)는 학습셋에서 제외
      ```
      제외에 대한 근거는 SA/analysis/data_eda.ipynb 를 통해 매치에 직접적인 영향을 주는 컬럼과 importance feature를 통해 중요도가 높은 feature를 select
