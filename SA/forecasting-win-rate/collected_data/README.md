@@ -43,7 +43,6 @@ collected_data/
 ├── match_json/
 ├── match-detail_json/
 └── user_requests_summary.csv
-
 ```
 
 
