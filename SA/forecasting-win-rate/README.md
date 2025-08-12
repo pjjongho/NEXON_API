@@ -37,6 +37,7 @@ python main.py
 
 ## 3. 폴더 및 파일 구조
 
+### 📂 프로젝트 폴더 및 파일 구조
 ```
 forecasting-win-rate/
 ├── analysis/ # 분석 및 시각화 관련 노트북
