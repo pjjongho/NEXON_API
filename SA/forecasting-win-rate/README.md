@@ -39,14 +39,14 @@ python main.py
 
 ```
 forecasting-win-rate/
-├── analysis/ # 분석 및 시각화 관련 코드/노트북
+├── analysis/ # 분석 및 시각화 관련 노트북
 ├── api_request/ # Nexon API 요청 스크립트 (basic, rank, recent, tier, match_detail)
 ├── collected_data/ # API 응답 저장(JSON/CSV)
 ├── model/ # 학습·추론 코드 및 저장된 모델
 ├── utils/ # 유틸리티 함수 (feature_engineering 포함)
 ├── api_key.txt # API 키 (gitignore 적용 권장)
 ├── main.py # 전체 실행 엔트리 포인트
-└── requirements.txt # 의존성 패키지 목록
+└── requirements.txt # 버전 설정
 ```
 
 
