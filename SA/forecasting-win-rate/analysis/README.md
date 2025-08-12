@@ -12,7 +12,7 @@
 | `df_match.csv` | 매치별 참가자 단위 원본+파생 메타데이터 |
 | `df_merged.csv` | API 기반 요약 지표 데이터 (basic/rank/recent/tier 병합 결과) |
 | `user_summary.csv` | 유저별 누적 통계 요약 (승/무/패, KDA, 경기당 지표) |
-| `df_final.csv` | **학습용 최종 데이터셋** (정보 누설 방지 피처 제외, target 포함) |
+| `df_final.csv` | **학습용 최종 데이터셋** (target 포함) |
 | `match_results.csv` | 매치별 승패 레이블(이진)만 저장한 데이터 |
 | `match_results_rf.csv` | RandomForest 모델 추론 결과 (유저 단위) |
 | `match_results_xgb.csv` | XGBoost 모델 추론 결과 (유저 단위) |
