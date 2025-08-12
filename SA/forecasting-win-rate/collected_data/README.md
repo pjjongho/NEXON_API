@@ -33,7 +33,7 @@
 
 ---
 
-#### 📂 주요 출력 파일 구조
+#### 📂 JSON 수집 파일 구조
 ```
 collected_data/
 ├── basic_json/
@@ -44,9 +44,6 @@ collected_data/
 ├── match-detail_json/
 └── user_requests_summary.csv
 
-analysis/
-├── df_match.csv
-└── df_final.csv
 ```
 
 
